@@ -1,0 +1,50 @@
+# General
+experiment_name: forwardbridge_mit
+checkpoints: checkpoints
+logs: logs
+data: data
+wandb_entity: null
+seed: 42
+device: gpu
+
+# Settings
+sample_every_val: 1
+log_every_steps: 50
+samples_to_generate: 128
+samples_to_save: 128
+samples_per_input: 5
+chains_to_save: 5
+number_chain_steps_to_save: 50
+enable_progress_bar: True
+
+# Data
+dataset: uspto_mit
+batch_size: 32
+num_workers: 1
+shuffle: True
+extra_nodes: False
+swap: True
+
+# Diffusion
+diffusion_steps: 500
+diffusion_noise_schedule: cosine
+transition: null
+fix_product_nodes: False
+
+# Model
+use_context: True
+extra_features: all
+extra_molecular_features: False
+n_layers: 5
+hidden_mlp_dims: {'X': 256, 'E': 128, 'y': 128}
+hidden_dims: {'dx': 256, 'de': 64, 'dy': 64, 'n_head': 8, 'dim_ffX': 256, 'dim_ffE': 128, 'dim_ffy': 128}
+
+# Training
+n_epochs: 1000
+lambda_train: [5, 0]
+lr: 0.0002
+weight_decay: 0.000000000001
+loss_type: cross_entropy
+
+# Checkpoint
+resume:
