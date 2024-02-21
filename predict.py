@@ -26,7 +26,7 @@ def main(smiles, checkpoint, n_samples, n_steps, seed, device):
     set_deterministic(seed)
 
     # Loading the model
-    model = MarkovBridge.load_from_checkpoint(checkpoint, map_location=device)
+    model = MarkovBridge.load_from_checkpoint(checkpoint, map_location=device).to(device)
     model.T = n_steps
 
     # Preparing input
