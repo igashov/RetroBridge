@@ -34,12 +34,12 @@ python predict.py --smiles "CN1C=NC2=C1C(=O)N(C(=O)N2C)C" --checkpoint models/re
 
 ## Sampling
 
-Trained models can be downloaded from [Zenodo](https://zenodo.org/record/8370261):
+Trained models can be downloaded from [Zenodo](https://zenodo.org/record/10688201):
 ```shell
 mkdir -p models
-wget https://zenodo.org/record/8370261/files/retrobridge.ckpt?download=1 -O models/retrobridge.ckpt
-wget https://zenodo.org/record/8370261/files/digress.ckpt?download=1 -O models/digress.ckpt
-wget https://zenodo.org/record/8370261/files/forwardbridge.ckpt?download=1 -O models/forwardbridge.ckpt
+wget https://zenodo.org/record/10688201/files/retrobridge.ckpt?download=1 -O models/retrobridge.ckpt
+wget https://zenodo.org/record/10688201/files/digress.ckpt?download=1 -O models/digress.ckpt
+wget https://zenodo.org/record/10688201/files/forwardbridge.ckpt?download=1 -O models/forwardbridge.ckpt
 ```
 
 Sampling with RetroBridge model:
