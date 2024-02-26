@@ -117,7 +117,7 @@ for key in ['product', 'pred_product']:
 compute_accuracy(df_processed, top=[1, 3, 5, 10], scoring=lambda df: np.log(df['confidence']))
 ```
 
-## Licesne
+## License
 
 RetroBridge is released under [CC BY-NC 4.0](LICENSE.txt) license.
 
