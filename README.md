@@ -25,13 +25,15 @@ pip install -r requirements.txt
 
 To sample reactants for a given product molecule:
 ```
+mkdir -p models
+wget https://zenodo.org/record/10688201/files/retrobridge.ckpt?download=1 -O models/retrobridge.ckpt
 python predict.py --smiles "CN1C=NC2=C1C(=O)N(C(=O)N2C)C" --checkpoint models/retrobridge.ckpt
 ```
 
 ## Training
 
 * RetroBridge: `python train.py --config configs/retrobridge.yaml --model RetroBridge`
-* DiGress: `python train.py --config configs/digress.yaml  --model DiGress`
+* DiGress: `python train.py --config configs/digress.yaml --model DiGress`
 * ForwardBridge: `python mit/train.py --config configs/forwardbridge.yaml`
 
 ## Sampling
